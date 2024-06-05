@@ -1,0 +1,989 @@
+.App {
+  background-image: url(./assets/bg.gif);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 200vw;
+  overflow: hidden;
+}
+
+.topbar {
+  display: flex;
+}
+
+.topbar img {
+  width: 20vw;
+}
+
+.leaderboard {
+  position: absolute;
+  left: 2vw;
+  top: 13vw;
+}
+
+.guide {
+  top: 13vw;
+  position: absolute;
+  right: 1vw;
+}
+
+.jump {
+  position: absolute;
+  left: 34%;
+  width: 30vw !important;
+  height: 10vw !important;
+  top: 12vw;
+}
+
+.midbar img {
+  width: 15vw;
+}
+
+.reward_history {
+  position: absolute;
+  left: 4vw;
+  top: 33vw;
+}
+
+.title_position {
+  top: 33vw;
+  position: absolute;
+  right: 4vw;
+}
+
+.charcter_left {
+  position: absolute;
+  left: 3vw;
+  top: 49vw;
+  width: 17vw;
+}
+
+.charcter_right {
+  position: absolute;
+  right: 6vw;
+  top: 50vw;
+  width: 14vw;
+}
+
+.marque-container {
+  overflow: hidden;
+  width: 100%;
+  // height: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0vw;
+
+  .marquee-alternative {
+    margin: auto;
+    margin-left: 3vw;
+    height: 14vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .taxts {
+      background: transparent;
+      background-size: 100% 100%;
+      height: 8vw;
+      padding: 0vw 5vw 0vw 2vw;
+      color: white;
+      font-size: 3.5vw;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgb(241, 241, 151);
+      border-radius: 10vw;
+
+      .uu-image {
+        width: 12vw;
+        height: 12vw;
+        margin-left: -4vw;
+        border-radius: 10vw;
+        // border: 2px solid #4074e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 8vw;
+          border-radius: 10vw;
+        }
+
+        a {
+          outline: none;
+          cursor: none;
+        }
+      }
+
+      .bt-image {
+        width: 12vw;
+        height: 12vw;
+        margin-right: -6.5vw;
+        border-radius: 10vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2vw;
+
+        img {
+          width: 12vw;
+          border-radius: 10vw;
+        }
+
+        a {
+          outline: none;
+          cursor: none;
+        }
+      }
+
+      .text {
+        margin-left: 1vw;
+
+        .content {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 7vw;
+          }
+
+          .nick-name {
+            text-align: initial;
+            margin-right: 1vw;
+          }
+
+          .icon {
+            margin: 0 1vw;
+            width: 5vw;
+          }
+        }
+      }
+
+      span {
+        color: #fff300;
+        margin-left: 1vw;
+      }
+    }
+  }
+}
+
+.play {
+  bottom: -50vw;
+  height: 150vw;
+  .tiles {
+    position: relative;
+    top: 17vw;
+    height: 93vw;
+    width: 100%;
+    .left-images,
+    .right-images {
+      width: 50%;
+      height: 95vw;
+    }
+  }
+  .mascot {
+    width: 40vw;
+    left: 0;
+    right: 0;
+    bottom: 25vw;
+    margin: 0 auto;
+  }
+  // .mascotmove {
+  //   transition: transform 0.3s ease;
+  //   position: absolute;
+  // }
+
+  // @keyframes mascotmove {
+  //   0% {
+  //     transform: translate(var(--startX), var(--startY));
+  //   }
+  //   100% {
+  //     transform: translate(var(--endX), var(--endY));
+  //   }
+  // }
+  // .mascotmove {
+  //   animation: mascotmove 0.5s forwards;
+  //   width: 40vw;
+  //   left: -52vw;
+  //   right: 0;
+  //   bottom: 55vw;
+  //   margin: 0 auto;
+  // }
+  .input-btns {
+    width: 100%;
+    bottom: 20vw;
+    .chances {
+      background-image: url(./assets/chances_to_play.png);
+      background-size: 100% 100%;
+      width: 35vw;
+      height: 12vw;
+      .input-field {
+        width: 25%;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 3.5vw;
+        font-weight: bold;
+        text-align: center;
+        height: 5vw;
+        border-radius: 1vw;
+        margin-right: 4vw !important;
+        margin-top: -1vw;
+        &:focus {
+          outline: none;
+        }
+        &[type="number"]::-webkit-inner-spin-button,
+        &[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+    .select-btns {
+      background: url(./assets/manual_auto_slider_bg.png);
+      background-size: 100% 100%;
+      width: 35vw;
+      height: 12vw;
+      .manual {
+        width: 45%;
+        height: 8vw;
+        img {
+          width: 100%;
+          margin-top: -2vw;
+        }
+      }
+      .auto {
+        width: 40%;
+        height: 8vw;
+        img {
+          width: 100%;
+          margin-top: -2vw;
+          margin-left: 2vw;
+        }
+      }
+    }
+  }
+  .jump-btn {
+    left: 0;
+    right: 0;
+    bottom: 8vw;
+    img {
+      width: 35vw;
+    }
+  }
+}
+.Front_position {
+  position: absolute;
+  transition: all 0.3s ease; /* Optional: Add transition for smooth movement */
+
+  &.t_one {
+    top: 71vw;
+    /* Add left position as per your requirement */
+  }
+
+  &.t_two {
+    /* Define position for t_two */
+  }
+
+  /* Define positions for other tiles */
+}
+.overlay {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  height: 200vw;
+  .leader_board {
+    background: url(./assets/popup_bg.png);
+    width: 95%;
+    height: 170vw;
+    background-size: 100% 100%;
+    position: relative;
+    .leaderboard_name {
+      position: absolute;
+      width: 83vw;
+      top: 8vw;
+      left: 7vw;
+    }
+    .close_btn {
+      position: absolute;
+      width: 12vw;
+      top: 18vw;
+      right: 1vw;
+    }
+    .full_board {
+      height: 140vw;
+      overflow-y: auto;
+      margin-top: 27vw;
+      // margin-right: 5vw;
+      .top-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: -1vw;
+        gap: 8vw;
+
+        .talent {
+          width: 25vw;
+          height: 10vw;
+        }
+
+        .user {
+          width: 25vw;
+          height: 10vw;
+        }
+      }
+      .rewards-section {
+        width: 100%;
+        top: 0;
+        .reward_title {
+          width: 39vw;
+          top: 5vw;
+        }
+        .reward_box {
+          background-image: url(./assets/reward_bg.png);
+          background-size: 100% 100%;
+          width: 90%;
+          // margin-left: 6vw;
+        }
+      }
+      .leaderboard-section {
+        top: 6vw;
+        .leaderboard-title {
+          top: -8vw;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          width: 40%;
+          margin: 0 auto;
+        }
+        .box_two {
+          background-image: url(./assets/box_2.png);
+          background-size: 100% 100%;
+          width: 90%;
+          height: 60vw;
+          margin: 0 auto;
+          .lb_buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            img {
+              width: 21vw;
+              height: 10vw;
+            }
+          }
+          .cp_button {
+            background-image: url(./assets/cp_btn.png);
+            background-size: 100% 100%;
+            width: 35vw;
+            height: 9.5vw;
+            z-index: 1;
+            .cpbtn_images {
+              width: 100%;
+              display: flex;
+              button {
+                width: 48%;
+                height: 5vw;
+              }
+              .cb_img {
+                width: 18vw;
+              }
+
+              .pb_img {
+                width: 15vw;
+              }
+            }
+          }
+        }
+      }
+    }
+    .full_board::-webkit-scrollbar {
+      width: 1vw;
+    }
+    .full_board::-webkit-scrollbar-track {
+      background-color: #050202;
+      border-radius: 5px;
+      background-size: 100% 100%;
+      margin-top: 12vw;
+    }
+    .full_board::-webkit-scrollbar-thumb {
+      background-image: url(./assets/scroll.png);
+      background-size: 120% 50%;
+      width: 10vw;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.rewards_btn {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 1.5vw;
+  gap: 3vw;
+  left: 1vw;
+  right: 0;
+  z-index: 1;
+  .hour_btn {
+    width: 21vw;
+    height: 10vw;
+  }
+
+  .daily_btn {
+    width: 21vw;
+    height: 10vw;
+  }
+
+  .overall_btn {
+    width: 21vw;
+    height: 10vw;
+  }
+}
+.rewards-slider {
+  width: 100%;
+  position: relative;
+
+  .sliderItem {
+    // background-image: url(./assets/Reward-Bg.png);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    height: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      // background-image: url(./assets/Title-Base.png);
+
+      background: brown;
+      background-size: 100% 100%;
+      width: 60%;
+      height: 16vw;
+      font-size: 9vw;
+      padding-top: 5vw;
+      top: 17vw;
+      text-shadow: 0px 2px #000000b8;
+    }
+
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      top: 0vw;
+
+      .inner {
+        white-space: nowrap;
+        transition: transform 0s;
+      }
+
+      .slide-buttons {
+        top: 23vw;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        img {
+          width: 12vw;
+        }
+      }
+    }
+
+    .carousel-item {
+      display: inline-flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      top: 4vw;
+
+      .inner-box {
+        // background-image: url(./assets/Reward-Box.png);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 74vw;
+
+        .rank {
+          top: 9vw;
+          font-size: 4.5vw;
+          color: white;
+          font-weight: 900;
+        }
+
+        .rewardImg {
+          display: flex;
+          position: relative;
+          align-items: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          justify-content: center;
+          top: -2vw;
+          gap: 5vw;
+          width: 100%;
+          height: 26vw;
+
+          .img-box {
+            width: 26vw;
+            background-image: url(./assets/reward-display.png);
+            background-size: 100% 100%;
+            height: 28vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2vw;
+
+            img {
+              width: 60%;
+            }
+          }
+        }
+
+        .desc {
+          background-image: url(./assets/reward-info-bg.png);
+          background-size: 100% 100%;
+          width: 84%;
+          margin: 0 auto;
+          color: black;
+          font-size: 3vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+          padding: 2vw 0;
+          position: relative;
+          top: 7vw;
+          height: 8vw;
+          span {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .indicators {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 5vw;
+      left: 0;
+      right: 0;
+
+      span {
+        border-radius: 50%;
+        height: 2vw;
+        width: 2vw;
+        background-color: rgb(206, 196, 196);
+        margin: 3vw 0.7vw;
+      }
+
+      span.active {
+        background-color: white;
+        border-radius: 50%;
+        height: 2vw;
+        width: 2vw;
+      }
+    }
+  }
+}
+.main-leaderboard {
+  width: 100%;
+  margin: 7vw 0 7vw 0;
+  position: relative;
+  top: -30vw;
+  .rank-section {
+    width: 100%;
+    .rank-section-inner {
+      width: 100%;
+      .top-position-holders {
+        background-size: 100% 100%;
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -27vw;
+        .user-container {
+          width: 25vw;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:first-child {
+            order: 2;
+          }
+          &:nth-child(2) {
+            order: 1;
+            margin-top: 3vw;
+            z-index: 1;
+          }
+
+          &:nth-child(3) {
+            order: 3;
+            margin-top: 3vw;
+          }
+
+          .innerData {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            font-weight: bold;
+
+            .first-user {
+              top: 9vw;
+              .rank-user-image {
+                border-radius: 50%;
+                position: absolute;
+                width: 11vw;
+                top: 3vw;
+                left: 2vw;
+              }
+
+              .rank-border-image {
+                width: 15vw;
+                top: 0vw;
+              }
+            }
+
+            .runner-user {
+              top: 9vw;
+              .rank-user-image {
+                border-radius: 50%;
+                position: absolute;
+                width: 11vw;
+                top: 3vw;
+                left: 2vw;
+              }
+
+              .rank-border-image {
+                width: 15vw;
+                top: 0vw;
+              }
+            }
+
+            .bottom-data1 {
+              width: 100%;
+              height: 23vw;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .bottom-data2 {
+              width: 100%;
+              height: 23vw;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .bottom-data3 {
+              width: 100%;
+              height: 23vw;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .bottom-info {
+              .username {
+                font-size: 3vw;
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                font-weight: 700;
+              }
+
+              .level-img {
+                width: 10vw;
+              }
+            }
+
+            .score-box {
+              font-size: 1.8vw;
+
+              .points {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+
+            a {
+              outline: none;
+              cursor: none;
+            }
+          }
+        }
+      }
+      // Bottom Winners
+      .rest-winners {
+        background-image: url(./assets/box_1.png);
+        background-size: 100% 100%;
+        width: 90%;
+        height: 80vw;
+        padding: 5vw 0 15vw 0;
+        margin: 0 auto;
+        .rest-position-holders {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          font-size: 2.5vw;
+          overflow: hidden;
+          margin: 0 auto;
+          .users-details-onward {
+            background-image: url(./assets/leaderboard-strip.png);
+            background-size: 100% 100%;
+            width: 86%;
+            height: 7vw;
+            margin: 0 auto;
+            padding: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            margin-bottom: 1vw;
+            border-radius: 6vw;
+            margin-bottom: 1vw;
+
+            .rank-id {
+              width: 6vw;
+              font-size: 2.5vw;
+              color: white;
+              font-weight: 900;
+              margin-left: -2vw;
+            }
+
+            .frame {
+              // background-image: url(./assets/Leaderboard-frame.png);
+              background-size: 100% 100%;
+              width: 9vw;
+              height: 11vw;
+              padding-top: 1vw;
+            }
+
+            .border-img {
+              width: 11vw;
+              z-index: 1;
+              left: 0vw;
+            }
+
+            .user-image {
+              width: 8vw;
+              left: 9.3vw;
+              border-radius: 50%;
+              top: 1vw;
+            }
+
+            .user-image-top {
+              width: 8vw;
+              border-radius: 50%;
+              left: 10vw;
+              top: 3vw;
+            }
+
+            .user-info {
+              overflow: hidden;
+              display: flex;
+              text-align: left;
+
+              .username {
+                font-size: 2vw;
+                font-weight: 700;
+                width: 16vw;
+              }
+            }
+
+            .points {
+              background-color: #3b0908;
+              border-radius: 5vw;
+              padding: 1.5vw 3vw;
+              font-size: 2vw;
+            }
+
+            .est-rew {
+              width: 26vw;
+              height: 8vw;
+              font-size: 2vw;
+              font-weight: bold;
+              padding: 0vw 2vw;
+              text-align: left;
+            }
+
+            a {
+              outline: none;
+              cursor: none;
+            }
+          }
+        }
+      }
+
+      .rest-position-holders-max {
+        overflow-y: scroll !important;
+      }
+
+      .rest-position-holders-max::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      .rest-position-holders-max::-webkit-scrollbar-track {
+        background-color: #3b375c;
+        border-radius: 10px;
+      }
+
+      .rest-position-holders-max::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #1cbcc8;
+      }
+    }
+  }
+
+  .tab-buttons {
+    .btn-active {
+      width: 30vw;
+    }
+
+    .btn {
+      width: 30vw;
+      filter: grayscale(1);
+      transition: all 0.2s ease;
+    }
+  }
+}
+.see-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  img {
+    width: 25vw;
+  }
+}
+.no-data {
+  color: white;
+  font-size: 4vw;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 19vw;
+}
+// MainLeaderboard.jsx scss end here
+.game-popup {
+  width: 100%;
+  margin-top: 40vw;
+  .container-oops {
+    background-image: url(./assets/oops.png);
+    background-size: 100% 100%;
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+  }
+  .container-success {
+    background-image: url(./assets/excellent.png);
+    background-size: 100% 100%;
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+  }
+  .container-whoopie {
+    background-color: skyblue;
+    background-size: 100% 100%;
+    width: 100%;
+    color: white;
+    margin: 0 auto;
+  }
+  .content {
+    width: 70%;
+    top: 43vw;
+    .body-text {
+      color: brown;
+      font-weight: bold;
+      font-size: 4vw;
+      width: 90%;
+      .head-text {
+        background-color: #3b375c;
+        background-size: 100% 100%;
+        width: 90%;
+        padding-top: 10vw;
+        height: 14vw;
+        font-size: 7vw;
+        left: 0;
+        right: 0;
+        top: -22vw;
+        text-shadow: 0px 2px #000000b8;
+        font-family: sweet;
+        margin: 0 auto;
+      }
+      .rews-box {
+        width: 100%;
+        flex-wrap: wrap;
+        max-height: 60vw;
+        text-align: center;
+      }
+      .rews-box-max {
+        overflow-y: scroll;
+      }
+      .rews-box-max::-webkit-scrollbar {
+        width: 3px;
+      }
+      .rews-box-max::-webkit-scrollbar-track {
+        background-color: #3b375c;
+        border-radius: 10px;
+      }
+      .rews-box-max::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #ffc507;
+      }
+      img {
+        width: 12vw;
+      }
+      .reward-img {
+        border: 2px dotted brown;
+        border-radius: 2vw;
+        width: 18vw;
+        height: 20vw;
+      }
+      .name {
+        background-color: #6d5454;
+        font-size: 2.5vw;
+        line-height: 3vw;
+        color: white;
+        border-radius: 5vw;
+        width: 20vw;
+      }
+    }
+  }
+  .modal-close {
+    bottom: 0;
+    width: 12vw;
+    // right: 3vw;
+    img {
+      width: 100%;
+    }
+  }
+}
